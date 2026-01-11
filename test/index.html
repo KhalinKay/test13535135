@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Chatbot Widget Test</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Chatbot Widget Test Page</h1>
+    <p>This page demonstrates embedding the Kaynai chatbot widget using the provided snippet.</p>
+    <p>Widget configuration is set in the script before the closing <code>&lt;/body&gt;</code> tag.</p>
+    <section class="card">
+      <h2>Try It</h2>
+      <p>Once the widget script loads, the chat launcher will appear at the configured position.</p>
+    </section>
+  </main>
+
+  <!-- Add this before closing </body> tag -->
+  <script>
+    window.chatbotConfig = {
+      userId: '2',
+      baseUrl: 'https://kaynai.co.uk',
+      botName: 'AI Assistant',
+      greeting: 'Hi! How can I help you today?',
+      primaryColor: '#4F46E5',
+      position: 'bottom-right'
+    };
+  </script>
+  <script src="https://kaynai.co.uk/static/widget/embed.js" defer></script>
+</body>
+</html>
